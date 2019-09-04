@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    img{
+      display: block;
+      max-width: 300px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <script src="/js/jquery.js"></script>
+  <!-- <script src="https://corp_beta.31huiyi.com/Static2019/corp/static/jquery-1.10.1.min.js?v=20190610_20"></script> -->
+  <h2>ajax请求</h2>
+  <img src="/img/girl.jpg" alt="">
+  <img src="/img/timg.jpg" alt="">
+  <img src="/img/timg2.jpg" alt="">
+  <script>
+    $.post('/api/formdata/GetDataFormListField', {
+      CompanyId: "41089453",
+      DataFormId: "1091823953"
+    } ,function(data) {
+      console.log(data)
+    })
+    // http://mock.31huiyi.com/mock/244
+    $.get('/api/corppageapi/GetCorpPageList', {
+      pageNum: 1,
+      pageSize: 10,
+      title: 'xxx',
+      routeName: '44'
+    } ,function(data) {
+      console.log(data)
+    })
+
+    $.post('/api/corpmenumoduleapi/getCorpMenuModuleList', {
+      pageIndex: 1,
+      pageSize: 10,
+    } ,function(data) {
+      console.log(data)
+    })
+    
+
+    
+  </script>
+</body>
+</html>
