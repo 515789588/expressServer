@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/515789588/expressServer#readme",
   "devDependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "glob": "^7.1.4",
     "http-proxy-middleware": "^0.19.1",
     "socket.io": "^2.2.0"
